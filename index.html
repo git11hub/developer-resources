@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Collapsible sidebar using Bootstrap 4</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>Free Developer Resources</h3>
+            </div>
+
+            <ul class="list-unstyled components">
+                <p>Categories :</p>
+                <li class="active">
+                    <a href="#accessibilitySubmenu" data-toggle="collapse">Accessibility</a>
+
+                    <!-- <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul> -->
+                </li>
+                <li>
+                    <a href="#designSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Design</a>
+                        <ul class="collapse list-unstyled" id="designSubMenu">
+                            <li>
+                                <a href="#designInspirationSubmenu" data-toggle="collapse">Design Inspiration</a>
+                            </li>
+                            <li>
+                                <a href="#designToolsSubmenu" data-toggle="collapse">Design Tools</a>
+                            </li>
+                            <li>
+                                <a href="#wireframeSubmenu" data-toggle="collapse">Wireframe & Mockups</a>
+                            </li>
+                            <li>
+                                <a href="#templatesSubmenu" data-toggle="collapse">Templates</a>
+                            </li>
+                            <li>
+                                <a href="#fontsSubmenu" data-toggle="collapse">Fonts</a>
+                            </li>
+                            <li>
+                                <a href="#colorsSubMenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Colors</a>
+                                    <ul class="collapse list-unstyled" id="colorsSubMenu">                                        
+                                            <li>
+                                                <a href="#colorPalettesSubmenu" data-toggle="collapse">Color Palettes</a>
+                                            </li>
+                                            <li>
+                                                <a href="#gradientsSubmenu" data-toggle="collapse">Gradients</a>
+                                            </li>                                        
+                                    </ul>
+                            </li>
+                        </ul>
+                </li>
+                <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Image
+                        Resources </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">CSS</a>
+                </li>
+                <li>
+                    <a href="#">Generators</a>
+                </li>
+            </ul>
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span>Toggle Sidebar</span>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Page</a>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </nav>
+            <!-- Accessibility -->
+            <div id="accessibilitySubmenu" class="collapse">
+                <h4>Accessibility:</h3>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="https://moritzgiessmann.de/accessibility-cheatsheet/" target="_blank">Accessibility
+                            Cheat-sheet</a>
+                    </li>
+                    <li>
+                        <a href="https://abc.useallfive.com/" target="_blank">Accessible Brand Colors</a>
+                    </li>
+                    <li>
+                        <a href="https://www.websitehostingrating.com/color-contrast-perception-checker/"
+                            target="_blank">Colour Contrast Checker</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Design -->
+                <!-- Design Inspiration -->
+                <div id="designInspirationSubmenu" class="collapse">
+                    <h4>Design Inspiration:</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.awwwards.com/" target="_blank">Awwwards</a>
+                        </li>
+                        <li>
+                            <a href="https://www.behance.net/" target="_blank">Behance</a>
+                        </li>
+                        <li>
+                            <a href="https://dribbble.com/"
+                                target="_blank">Dribbble</a>
+                        </li>
+                        <li>
+                            <a href="https://onepagelove.com/inspiration"
+                                target="_blank">Onepagelove</a>
+                        </li>
+                        <li>
+                            <a href="https://webframe.xyz/"
+                                target="_blank">Webframe</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Design Tools -->
+                <div id="designToolsSubmenu" class="collapse">
+                    <h4>Design Tools:</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.adobe.com/products/xd.html" target="_blank">Adobe XD</a>
+                        </li>
+                        <li>
+                            <a href="https://www.figma.com/" target="_blank">Figma</a>
+                        </li>                        
+                    </ul>
+                </div>
+
+                <!-- Wireframe & Mockups -->
+                <div id="wireframeSubmenu" class="collapse">
+                    <h4>Wireframe & Mockups:</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://app-mockup.com/" target="_blank">AppMockUp</a>
+                        </li>
+                        <li>
+                            <a href="https://mockuphone.com/" target="_blank">MockuPhone</a>
+                        </li>                        
+                        <li>
+                            <a href="https://app.moqups.com/" target="_blank">moqups</a>
+                        </li>
+                        <li>
+                            <a href="https://wireframe.cc/" target="_blank">Wireframe.cc</a>
+                        </li>                        
+                    </ul>
+                </div>
+
+                <!-- Templates -->
+                <div id="templatesSubmenu" class="collapse">
+                    <h4>Wireframe & Mockups:</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://www.wix.com/" target="_blank">Wix</a>
+                        </li>
+                        <li>
+                            <a href="https://www.squarespace.com/" target="_blank">Squarespace</a>
+                        </li>                        
+                        <li>
+                            <a href="https://html5up.net/" target="_blank">HTML5 Up</a>
+                        </li>
+                        <li>
+                            <a href="https://startbootstrap.com/" target="_blank">Start Bootstrap</a>
+                        </li>                        
+                        <li>
+                            <a href="https://templated.co/" target="_blank">Templated.co</a>
+                        </li>
+                        <li>
+                            <a href="https://freehtml5.co/" target="_blank">Free HTML5</a>
+                        </li>                        
+                        <li>
+                            <a href="https://colorlib.com/wp/templates" target="_blank">Colorlib</a>
+                        </li>
+                        <li>
+                            <a href="https://www.zerotheme.com/" target="_blank">Zero Theme</a>
+                        </li>                        
+                        <li>
+                            <a href="https://www.styleshout.com/free-templates" target="_blank">Styleshout</a>
+                        </li>
+                        <li>
+                            <a href="https://www.html5xcss3.com/" target="_blank">HTML5xCSS3</a>
+                        </li>                        
+                        <li>
+                            <a href="https://athemes.com/collections/free-bootstrap-admin-templates/" target="_blank">Admin UI Themes</a>
+                        </li>
+                        <li>
+                            <a href="https://themewagon.com/free-html-ecommerce-templates-html5-bootstrap" target="_blank">Ecommerce Themes</a>
+                        </li>                        
+                        <li>
+                            <a href="https://onepagelove.com/templates" target="_blank">Onepagelove</a>
+                        </li>                        
+                    </ul>
+                </div>
+
+                <!-- Fonts -->
+                <div id="fontsSubmenu" class="collapse">
+                    <h4>Fonts:</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://fonts.google.com/" target="_blank">Google Fonts</a>
+                        </li>
+                        <li>
+                            <a href="https://fontflipper.com/" target="_blank">Font Flipper</a>
+                        </li>                        
+                        <li>
+                            <a href="https://fontspark.app/" target="_blank">FontSpark</a>
+                        </li>
+                        <li>
+                            <a href="https://www.colorsandfonts.com/" target="_blank">ColorAndFonts</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Colors -->
+                    <!-- Color Palettes -->
+                    <div id="colorPalettesSubmenu" class="collapse">
+                        <h4>Color Palettes:</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="http://stylifyme.com/" target="_blank">Stylify Me- Get Color Palette from Websites</a>
+                            </li>
+                            <li>
+                                <a href="https://color.hailpixel.com/" target="_blank">https://color.hailpixel.com/</a>
+                            </li>                        
+                            <li>
+                                <a href="https://paletton.com/" target="_blank">https://paletton.com/</a>
+                            </li>
+                            <li>
+                                <a href="https://color.adobe.com/create/color-wheel" target="_blank">https://color.adobe.com/create/color-wheel</a>
+                            </li>
+                            <li>
+                                <a href="https://flatuicolors.com/" target="_blank">https://flatuicolors.com/</a>
+                            </li>
+                            <li>
+                                <a href="https://www.0to255.com/" target="_blank">https://www.0to255.com/</a>
+                            </li>                        
+                            <li>
+                                <a href="https://coolors.co/" target="_blank">https://coolors.co/</a>
+                            </li>
+                            <li>
+                                <a href="https://www.colorsandfonts.com/" target="_blank">https://www.colorsandfonts.com/</a>
+                            </li>
+                            <li>
+                                <a href="https://mycolor.space/" target="_blank">https://mycolor.space/</a>
+                            </li>                        
+                            <li>
+                                <a href="https://colors.lol/" target="_blank">https://colors.lol/</a>
+                            </li>
+                            <li>
+                                <a href="http://colormind.io/" target="_blank">http://colormind.io/</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- Gradients -->
+                    <div id="gradientsSubmenu" class="collapse">
+                        <h4>Gradients:</h4>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a href="https://uigradients.com" target="_blank">https://uigradients.com</a>
+                            </li>
+                            <li>
+                                <a href="https://cssgradient.io/" target="_blank">https://cssgradient.io/</a>
+                            </li>                        
+                            <li>
+                                <a href="https://gradient-designer.csspost.com/" target="_blank">https://gradient-designer.csspost.com/</a>
+                            </li>                            
+                        </ul>
+                    </div>
+                
+
+        </div>
+    </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+        integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+        });
+    </script>
+</body>
+
+</html>
