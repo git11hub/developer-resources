@@ -87,6 +87,7 @@ a:focus {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    color: #fff;
 }
 
 #sidebar ul li a:hover {
@@ -167,3 +168,25 @@ a.article:hover {
         display: none;
     }
 }
+
+/* testing area  */
+a:link {
+    color: #0000EE;
+    /* background-color: transparent; */
+    text-decoration: none;
+  }
+  a:visited {
+    color: #5252ff;
+    /* background-color: transparent; */
+    /* text-decoration: none; */
+  }
+  a:hover {
+    color: #0f0fff;
+    background-color: transparent; 
+     text-decoration: underline; 
+   }
+  /* a:active {
+    color: rgb(0, 255, 34);
+    background-color: transparent;
+    text-decoration: underline;
+  } */
