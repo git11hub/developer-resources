@@ -176,7 +176,7 @@ a:link {
     text-decoration: none;
   }
   a:visited {
-    color: #5252ff;
+    color: rgb(255, 0, 0);
     /* background-color: transparent; */
     /* text-decoration: none; */
   }
@@ -190,3 +190,6 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
   } */
+  footer{
+      text-align: center;
+  }
