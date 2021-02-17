@@ -176,7 +176,7 @@ a:link {
     text-decoration: none;
   }
   a:visited {
-    color: rgb(255, 0, 0);
+    color: purple;
     /* background-color: transparent; */
     /* text-decoration: none; */
   }
